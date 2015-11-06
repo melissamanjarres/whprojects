@@ -1,0 +1,443 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body{
+  	font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+  	 background: #FFf;
+  	 
+}
+body a{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.bg{
+	background:url(https://photos-2.dropbox.com/t/2/AAAT9y_xRwtX9WMva5dkRErw8KmTr_r-GmvEZh-dyW-AfQ/12/314075836/jpeg/32x32/1/1443794400/0/2/banner_projects2.jpg/CLzV4ZUBIAEgAiADIAYgBygCKAc/hrbCpjeBGmfQC5BYUwyyCR2nCV8oT2Tr0oUlxaHm1gQ?size=1024x768&size_mode=2) no-repeat center;
+	background-size:cover;
+}
+
+.header{
+	background:rgba(117, 196, 165, 0.6);
+}
+
+.banner-info h1{
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 5em;
+	padding: 2em 0;
+}
+.banner-info h1 span{
+	font-weight: 100;
+	background: #868686;
+	font-size: 0.7em;
+	padding: 0.2em 0.5em;
+	display: inline-block;
+}
+.banner-info h1 label{
+	background:rgba(114, 189, 163, 0.86);
+	font-size: 1em;
+	padding: 0.15em 0.5em;
+	margin-left:1em;
+}
+/*---- banner-grids ----*/
+.banner-grid{
+	background:rgba(114, 189, 163, 0.72);
+	float:left;
+	width:20%;
+	padding:2em 2em 2.3em 2em;
+	float:left;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.banner-grid:hover,.banner-grid-active{
+	background:rgba(244, 135, 101, 0.66);
+}
+.banner-grid span{
+	width: 58px;
+	height: 58px;
+	display: inline-block;
+	background: url(../images/top-icons.png) no-repeat 0px 0px;
+}
+.banner-grid h3{
+	color:#FFF;
+	text-transform:uppercase;
+	font-size:1.2em;
+	margin:0;
+	padding:0.5em 0;
+}
+
+/*---- about ----*/
+.head-section h3{
+	color:#6F6F6F;
+	text-transform:uppercase;
+	font-style:italic;
+	font-size:2em;
+}
+.head-section h3 span{
+	font-weight:300;
+	margin-right:0.5em;
+}
+.about-grids{
+	padding:1.5em 0 0 0;
+}
+.about-grid{
+	margin:0;
+	padding:0;
+}
+.about-grid1{
+	background:#00A388;
+}
+.about-grid-pic img{
+	width:100%;
+}
+.about-grid-info{
+	padding: 2.3em 2.5em;
+}
+.about-grid-info h4{
+	font-size: 1.3em;
+	font-weight: 400;
+	border-bottom: 1px solid #FFF;
+	padding: 0 0 0.5em 0;
+}
+.about-grid-info h4 a{
+	color:#FFF;
+	text-transform:uppercase;
+	text-decoration:none;
+}
+.about-grid-info p{
+	color:#FFFFFF;
+	font-size:0.875em;;
+	line-height:1.7em;
+	font-weight:100;
+}
+.about-grid2{
+	background:#00A388;
+}
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/*	Animation effects */
+
+.b-animate-go{
+	text-decoration:none;
+}
+.b-animate{
+	visibility: hidden;
+	font-size:1.1em;
+	font-weight:700;
+}
+.b-animate img{
+}
+/* lt-ie9 */
+.b-animate-go:hover .b-animate{
+	visibility:visible;
+}
+.b-from-left{
+	position: relative;
+	left: -100%;
+	background: rgba(214, 95, 88, 0.95);
+	height: 100%;
+	margin: 0;
+}
+.b-animate-go:hover .b-from-left{
+	left: 0;
+	top: 0px;
+	bottom:0;
+	padding: 1em 0 0 0;
+}
+span.m_4{
+	font-size:14px;
+	font-weight:400;
+}
+p.m_5 {
+	margin:2% auto 5%;
+	width: 70%;
+	color: #283A47;
+	font-size: 1.1em;
+	font-weight: 600;
+	line-height: 1.5em;
+	text-align: center;
+}
+.p-img {
+	width:100%;
+}
+.more-ports span{
+	width: 92px;
+	height: 92px;
+	display: inline-block;
+	background: url(../images/p-btn-bg.png) no-repeat 0px 0px;
+}
+.more-ports{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-top:2%;
+}
+/*----*/
+a.load-ports{
+	background: #FC635E;
+	color: #FFF;
+	padding: 0.9em 2em;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	margin-top: 1.3em;
+	width: 18.44%;
+	margin: 3em auto;
+	display: block;
+}
+.load-ports:hover{
+	background: #868686;
+	text-decoration:none;
+	color:#FFF;
+}
+
+/*--work-with-us--*/
+.work-with-us{
+	background:#6F6F6F;
+	padding:2em 0;
+}
+.work-with-us h4{
+	text-transform:uppercase;
+	color:#FFF;
+	font-weight:600;
+	font-size:2.2em;
+}
+.work-with-us p{
+	font-size:1.5em;
+	font-weight:300;
+	color:#FFF;
+}
+a.catch-me{
+	text-transform:uppercase;
+	color:#FFF;
+	font-weight:400;
+	font-size:1.4em;
+	border:2px solid #FFF;
+	padding:0.5em 1em;
+	margin:1em 0 0;
+	display:inline-block;
+}
+a.catch-me:hover{
+	text-decoration:none;
+	color:#00A388;
+	border-color:#00A388;
+}
+
+/* responsive-design */
+
+@media(max-width:1366px){
+	.about-grid-info {
+		padding: 1.2em 2.5em;
+	}
+}
+@media(max-width:1280px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 0.5em 0 0 0;
+	}
+}
+@media(max-width:1024px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 0.5em 0 0 0;
+	}
+	.caption {
+		border: 8px solid #FFF;
+		padding: 0.2em 1em;
+	}
+}
+@media(max-width:768px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 0.5em 0 0 0;
+	}
+	.banner-info h1 span {
+		font-size: 0.5em;
+	}
+	.banner-info h1 label {
+		font-size: 0.73em;
+	}
+	.banner-info h1 {
+		padding: 1.5em 0;
+	}
+	.banner-grid {
+		padding: 1.5em 2em 1.5em 2em;
+	}
+	.top-grid {
+		margin: 0 0 1.5em;
+	}
+	#portfoliolist .portfolio {
+		width: 50%;
+	}
+	.contact-info {
+		left: 26%;
+	}
+}
+@media(max-width:640px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 0.5em 0 0 0;
+	}
+	.banner-info h1 span {
+		font-size: 0.45em;
+	}
+	.banner-info h1 label {
+		font-size: 0.62em;
+	}
+	.banner-info h1 {
+		padding: 1.3em 0;
+	}
+	.banner-grid {
+		padding:1em;
+	}
+	.contact-info {
+		left: 21%;
+	}
+	.banner-grid h3 {
+		font-size: 0.875em;
+	}
+	.work-with-us h4 {
+		font-size: 1.8em;
+	}
+	.work-with-us p {
+		font-size: 1.1em;
+		width: 78%;
+		margin: 0 auto;
+	}
+	a.catch-me {
+		font-size: 1.2em;
+	}
+}
+@media(max-width:480px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 0.5em 0 0 0;
+	}
+	.banner-info h1 span {
+		font-size: 0.35em;	
+	}
+	.banner-info h1 label {
+		font-size: 0.455em;
+	}
+	.banner-info h1 {
+		padding: 0.7em 0;
+	}
+	.banner-grid {
+		padding: 0.7em 0.4em;
+	}
+	.banner-grid h3 {
+		font-size: 0.875em;
+	}
+	.work-with-us h4 {
+		font-size: 1.6em;
+	}
+	.work-with-us p {
+		font-size: 1.1em;
+		width: 90%;
+		margin: 0 auto;
+	}
+	a.catch-me {
+		font-size: 1em;
+		padding: 0.5em 1em;
+	}
+	a.contact-me {
+		padding: 0.5em 1.3em;
+		font-size: 0.9em;
+		margin-top: 0.5em;
+	}
+}
+@media(max-width:320px){
+	.about-grid-info {
+		padding: 0.5em 1.34em;
+	}
+	.b-animate-go:hover .b-from-left {
+		padding: 2.2em 0 0 0;
+	}
+	.banner-info h1 span {
+		font-size: 0.25em;
+	}
+	.banner-info h1 label {
+		font-size: 0.29em;
+		position: absolute;
+	}
+	.banner-info h1 {
+		padding: 0.2em 0 1em;
+	}
+	.banner-grid {
+		padding: 0.5em 0.4em;
+		width: 33.33%;
+	}
+	
+	#portfoliolist .portfolio {
+		width: 100%;
+	}
+	.banner-grid h3 {
+		font-size: 0.875em;
+		padding: 0.2em;
+	}
+	.work-with-us h4 {
+		font-size: 1.3em;
+	}
+	.work-with-us p {
+		font-size: 1em;
+		width: 100%;
+		margin: 0 auto;
+	}
+	a.catch-me {
+		font-size: 1em;
+		padding: 0.5em 1em;
+	}
+	
+	.work-with-us {
+		padding: 0.5em 0 1.2em;
+	}
+}
+

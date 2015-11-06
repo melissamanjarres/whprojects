@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   get 'welcome/index'
 
   devise_for :users
@@ -58,5 +59,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   get 'aboutus' => 'static#about-us', as: :about
-  get 'projects' => 'static#projects', as: :projects
+  #get 'projects' => 'static#projects', as: :projects
 end

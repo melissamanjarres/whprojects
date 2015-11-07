@@ -1,4 +1,19 @@
-.navbar-brand{
+$color-primary-0: #00CC99;	// Main Primary color */
+$color-primary-1: #53D9B7;
+$color-primary-2: #2AD1A7;
+$color-primary-3: #00A37A;
+$color-primary-4: #007E5E;
+
+$color-secondary-1-0: #FF9E00;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFC361;
+$color-secondary-1-2: #FFB133;
+$color-secondary-1-3: #FB9B00;
+$color-secondary-1-4: #C27800;
+
+.navbar{
+    margin-bottom :0!important;
+    
+    .navbar-brand{
     background-image:url("logo.png");
     background-size: cover;
     display:block;
@@ -7,13 +22,47 @@
     outline:none;
     text-indent:-9999px;
     width: 160px;
-}
-.navbar{
-    margin-bottom :0!important;
+    }
     
-}
-.navbar-right{
+  .navbar-default{
+     background: none!important;
+  } 
+    .navbar-nav {
+    
+      li , p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 16px;
+      }
+          
+      a:hover, a:focus{
+        background:none;
+        text-decoration:none;
+      }
+    }
+    
+  .navbar-right{
     padding-top:10px;
+}
+      .navbar-button{
+        border: solid 1px $color-primary-0 ;
+        border-radius: 5px;
+        
+          a{
+          color:$color-primary-0;
+          }
+      
+         a:hover, a:focus{
+          background-color: $color-primary-0 !important;
+          color:white !important;
+        }
+      }
+}
+
+
+.container-compressed{
+    width:80%;
+    margin:0;
+    padding:0;
 }
 
 .container-expanded{
@@ -27,32 +76,35 @@
     background-color: rgba(76,76,76,0.3);
 }
 
+
 .services h2{
     display:none;
 }
+
 .our-story{
     padding-top:80px;
-}
-.our-story p{
+ p{
     margin-top:30px;
     font-size:16px;
 }
-.our-story img{
+ img{
     width:80%;
 }
+  
+}
+
 .footer{
     background-color:rgba(192,192,192,0.3);
     margin-top:80px;
-    margin-bottom:0px;
-    padding-top:15px;
-    
+    padding-top:40px;
+    padding-bottom:30px;
+    position:relative;
 }
 
 .log-in{
     padding-top: 40px;
     width:90%;
 }
-
 
 .wrapper{
     margin:0 auto;

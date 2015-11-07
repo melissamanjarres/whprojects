@@ -49,28 +49,41 @@
   </div>
 
 </section>
+
 <section class="services container">
     <h2 >Services</h2>
+    
     <div class="row">
-    <article class="col-md-4">
-      <h3 class="text-center">Proyectos</h3>
-      <p class="text-center"><%= image_tag("proyectos.png", :alt => "proyectos") %></p>
-      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <p class="text-center"><%= link_to 'Find out more', :projects %></p>
-    </article>
-
-    <article class="col-md-4">
-      <h3 class="text-center">Tecnologías</h3>
-      <p class="text-center"><%= image_tag("tecnologias.png", :alt => "Tecnología") %></p>
-      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <p class="text-center"><a href="#" target="_self">Find out more</a></p>
-    </article>
-
-    <article class="col-md-4">
-      <h3 class="text-center">Equipos</h3>
-      <p class="text-center"><%= image_tag("equipos.png", :alt => "Equipos") %></p>
-      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <p class="text-center"><a href="#" target="_self">Find out more</a> </a></li></p>
-    </article>
+    <div class="col-md-4 item">
+      <div class="info">
+            <h3>Proyectos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p><%= link_to 'Find out more', :projects %></p>
+          </div>
+          <div class="cover">
+            <p><%= image_tag("proyectos.png", :alt => "proyectos") %></p>
+          </div>
+    </div>
+    <div class="col-md-4 item">
+      <div class="info">
+            <h3>Tecnologías</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p><%= link_to 'Find out more', :projects %></p>
+          </div>
+          <div class="cover">
+            <p><%= image_tag("tecnologias.png", :alt => "Tecnología") %></p>
+          </div>
+    </div>
+    <div class="col-md-4 item">
+       <div class="info">
+            <h3>Equipos</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <p><%= link_to 'Find out more', :projects %></p>
+          </div>
+          <div class="cover">
+            <p><%= image_tag("equipos.png", :alt => "Equipos") %></p>
+          </div>
+    </div>
+    
     </div>
 </section>

@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /users
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  # GET /user
   # GET /users.json
   def index
     @users = User.all
@@ -62,6 +61,20 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users
+    render 'following'
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'followers'
   end
 
   private

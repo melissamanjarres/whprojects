@@ -4,20 +4,21 @@ $color-primary-2: #2AD1A7;
 $color-primary-3: #00A37A;
 $color-primary-4: #007E5E;
 
-$color-secondary-1-0: #FF9E00;	// Main Secondary color (1) */
-$color-secondary-1-1: #FFC361;
-$color-secondary-1-2: #FFB133;
-$color-secondary-1-3: #FB9B00;
-$color-secondary-1-4: #C27800;
+$color-secondary-0: #EB6D4C;	// Main Primary color */
+$color-secondary-1: #FFB39F;
+$color-secondary-2: #FF9174;
+$color-secondary-3: #DA4922;
+$color-secondary-4: #A83010;
 
 a:hover, a:focus{
         background:none;
         text-decoration:none!important;
 }
 
-a:visted{
-        color:inherited;
+.navbar-toggle {
+  margin-top:17px!important;
 }
+
 
 .navbar-default{
      background: none!important;
@@ -41,7 +42,8 @@ a:visted{
     .navbar-nav {
     
       li , p{
-        font-family: 'Fredoka One', cursive;
+        text-align:center;
+        font-weight:bold;
         font-size: 16px;
       }
     }
@@ -79,52 +81,48 @@ a:visted{
   }
   
 }
+
 .services {
   
+  padding-top:80px;
+  position:relative;
   h2{
   display:none;
   }
-
+  .services-img{
+    height:200px;
+  }
+  
 .item:hover .info{
   display:block;
 }
-
-
-
-.item .info{
-  background:#EB6D4C;
-  bottom: 0;
+.item{
+  height:250px;
+  
+  .info {
+  background:$color-secondary-0;
   display: none;
-  left: 0;
   padding:24px 28px 20px 20px;
   position: absolute;
   right: 0;
   top: 0;
   
-  h3{
-  color:white;
-  font-size:20px;
-  font-weight:bold;
-  margin:0 0 16px 0;
-  text-transform: uppercase;
-}
+  p, p a , h3{
+    color:white;
+  }
+  
+  
 }
 
-
+}
 
 .services:after {
   content: "";
   display: table;
   clear: both;
 }
- .row .col-green{
-  background-color:$color-primary-1;
+ 
 }
-.row .col-orange{
-  background-color:$color-secondary-1-1;
-} 
-}
-
 
 .footer{
   
@@ -142,14 +140,31 @@ a:visted{
 }
 
 .log-in{
-    padding-top: 40px;
-    width:90%;
-}
+    background:url("background-login.jpg");
+    padding: 100px 0;
+    
+    
+	form[role=login] span.glyphicon {
+		color: #adadad;
+	}
+.login-form{
+  
+  .col-xs-12{
+    margin-top:20px;
+  }
 
-.wrapper{
-    margin:0 auto;
-    position:relative;
-    width:95%;
+  .form-control {
+    padding-left: 40px;
+  }
+  
+ .form-control + .glyphicon {
+    position: absolute;
+    left: 0;
+	  padding-top: 10px;
+    padding-left: 27px;
+}
+}
+  
 }
 
 .profile {
@@ -262,11 +277,7 @@ a:visted{
 
 
 @media (min-width: 768px) { 
-  
-  .log-in{
-        width:60%;
-        margin:0 auto;
-    }
+
 }
 
 @media (min-width: 992px) {

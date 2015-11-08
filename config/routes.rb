@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  resources :teams
   get 'relationships/create'
 
   get 'relationships/destroy'
 
   resources :projects
   get 'welcome/index'
-
+  
+  
+  
   devise_for :users
   resources :users do
     member do

@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   # GET /teams
   # GET /teams.json
   def index
@@ -10,6 +10,9 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
+    @team =  Team.find(params[:id])
+    @team_members = @team.users
+    @user = User.find(params[:id]) if signed_in?
   end
 
   # GET /teams/new
@@ -21,11 +24,24 @@ class TeamsController < ApplicationController
   def edit
   end
 
+  def join
+    @title = "Join"
+    @team = Team.find(params[:id])
+    @team_members = @team.users
+  end
+
+  def leave
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'followers'
+  end
+
+
   # POST /teams
   # POST /teams.json
   def create
     @team = Team.new(team_params)
-
     respond_to do |format|
       if @team.save
         format.html { redirect_to @team, notice: 'Team was successfully created.' }
@@ -69,6 +85,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:name)
+      params.require(:team).permit(:name, :team_id, :user_id)
     end
 end

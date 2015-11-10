@@ -7,6 +7,16 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
    <section class="login-form">
+   		<div class="col-xs-12">
+   			<div class="picture-container">
+            	<div class="picture">
+				<%= image_tag(current_user.avatar.url(:thumb), :id =>"1", :alt => "default-avatar", :class =>"picture-src image-display")%>
+            	<%= f.file_field :avatar,:id =>"2", :class =>"image-upload"%> 
+            	</div>
+               <p class="text-center">Choose Picture</p>
+              </div>
+		</div>
+
  <div class="col-xs-12">
 				  <%= f.text_field :username, autofocus: true , :class => "form-control input-lg", :placeholder =>"Username"%>
 					<span class="glyphicon glyphicon-user"></span>

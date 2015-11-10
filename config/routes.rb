@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  get 'teamrelationships/create'
+
+  get 'teamrelationships/destroy'
+
   get 'technologies/index'
 
-  resources :teams
+  resources :teams do
+    member do
+      get 'join'
+      get 'leave'
+    end
+  end
   get 'relationships/create'
 
   get 'relationships/destroy'

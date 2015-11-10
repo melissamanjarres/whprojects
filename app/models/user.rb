@@ -40,7 +40,22 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   
-  has_many :team_relationships, dependent: :destroy
-  has_many :teams, through: :team_relationships
+  has_many :teamrelationships, dependent: :destroy
+  has_many :teams, through: :teamrelationships
+
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+  def team_member?(team)
+    teamrelationships.find_by_team_id(team.id)
+  end
+
+  def join!(team)
+    teamrelationships.create!(team_id: team.id)
+  end  
+
+  def unjoin!(team)
+    teamrelationships.find_by_team_id(team.id).destroy
+  end
   
 end

@@ -1,4 +1,6 @@
 class Team < ActiveRecord::Base
-  has_many :team_relationships, dependent: :destroy
-  has_many :users, through: :team_relationships
+  has_many :teamrelationships, dependent: :destroy
+  has_many :users, through: :teamrelationships
+  validates :user_id, presence: true
+
 end

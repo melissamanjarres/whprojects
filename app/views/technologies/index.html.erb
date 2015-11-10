@@ -1,0 +1,7 @@
+<h1>Technologies#index</h1>
+<p>Find me in app/views/technologies/index.html.erb</p>
+
+<%= @search.each  do |tweet| %>
+    <li><%=link_to image_tag(tweet.user.profile_image_url("bigger")) + tweet.user.name + tweet.text,  "https://twitter.com/#{tweet.user.screen_name}" %></li> 
+
+<%end%>

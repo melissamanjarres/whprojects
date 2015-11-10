@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'technologies/index'
+
   resources :teams
   get 'relationships/create'
 
@@ -7,7 +9,8 @@ Rails.application.routes.draw do
   resources :projects
   get 'welcome/index'
   
-  
+  resources :technologies
+  get 'technologies/index'
   
   devise_for :users
   resources :users do

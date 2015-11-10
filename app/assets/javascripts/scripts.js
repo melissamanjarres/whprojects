@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
-$("#2").change(function(){
+$(".image-upload").click(function(){
+		console.log('entro aqui');
         readURL(this);
     });
 });
@@ -10,7 +11,7 @@ function readURL(input) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
-            $('#1').attr('src', e.target.result).fadeIn('slow');
+            $('.image-display').attr('src', e.target.result);
         }
         reader.readAsDataURL(input.files[0]);
     }

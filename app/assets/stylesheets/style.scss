@@ -175,9 +175,29 @@ a:hover, a:focus{
     font-family:$font-title;
     }
     
+    .inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 15px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
 	form[role=login] span.glyphicon {
 		color: #adadad;
 	}
+
 .login-form{
   
   .col-xs-12, .col-xs-4, .col-xs-2{

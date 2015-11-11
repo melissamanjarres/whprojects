@@ -21,34 +21,40 @@
             </div>
 			  
 				<div class="col-xs-12">
-				  <%= f.text_field :username, autofocus: true , :class => "form-control input-lg", :placeholder =>"Username"%>
-					<span class="glyphicon glyphicon-user"></span>
+					<div class="inner-addon left-addon">
+					    <i class="glyphicon glyphicon-user"></i>
+					     <%= f.text_field :username, autofocus: true , :class => "form-control input-lg", :placeholder =>"Username"%>
+					</div>
 				</div>
 				
 				<div class="col-xs-12">
-				  <%= f.email_field :email, autofocus: true , class: "form-control input-lg", :placeholder =>"Email" %>
-					<span class="glyphicon glyphicon-envelope"></span>
+					<div class="inner-addon left-addon">
+					    <i class="glyphicon glyphicon-envelope"></i>
+					     <%= f.email_field :email, autofocus: true , class: "form-control input-lg", :placeholder =>"Email" %>
+					</div>
 				</div>
 				
 				<div class="col-xs-12">
-					
-          <%= f.password_field :password, autocomplete: "off", :class =>"form-control input-lg" , :placeholder =>"Password" %>
-					<span class="glyphicon glyphicon-lock"></span>
-					
 					<% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br/>
-
+          			<em>(<%= @minimum_password_length %> characters minimum)</em>
+          			<% end %><br/>
+					<div class="inner-addon left-addon">
+					    <i class="glyphicon glyphicon-lock"></i>
+					     <%= f.password_field :password, autocomplete: "off", :class =>"form-control input-lg" , :placeholder =>"Password" %>
+					</div>
+          
 				</div>
 				
 				<div class="col-xs-12">
-					<%= f.password_field :password_confirmation, autocomplete: "off", :class =>"form-control input-lg" , :placeholder =>"Confirm Password" %>
-					<span class="glyphicon glyphicon-lock"></span>
-					
+					<div class="inner-addon left-addon">
+					    <i class="glyphicon glyphicon-lock"></i>
+					     <%= f.password_field :password_confirmation, autocomplete: "off", :class =>"form-control input-lg" , :placeholder =>"Confirm Password" %>
+					</div>
 				</div>
 				
      <div class="col-xs-12 text-right">
       <%= f.submit "Create",  :class => "btn btn-lg btn-success"%>
+      <%= link_to 'Back', root_path, :class => "btn btn-lg btn-default" %>
      </div>
 
     <% end %>

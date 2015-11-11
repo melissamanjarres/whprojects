@@ -16,18 +16,26 @@
       <div class="row">
                 
         <div class="col-xs-12">
-          <%= f.text_field :name, autofocus: true , :class => "form-control input-lg", :placeholder =>"Project Name"%>
-          <span class="glyphicon glyphicon-user"></span>
+          <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-list-alt"></i>
+               <%= f.text_field :name, autofocus: true , :class => "form-control input-lg", :placeholder =>"Project Name"%>
+          </div>
+          
         </div>
         
         <div class="col-xs-12">
-          <%= f.text_area :description, autofocus: true , class: "form-control input-lg", :placeholder =>"Short description of you project ..." %>
-          <span class="glyphicon glyphicon-envelope"></span>
+          <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-pencil"></i>
+               <%= f.text_area :description, autofocus: true , class: "form-control input-lg", :placeholder =>"Short description of you project ..." %>
+          </div>
+          
         </div>
 
         <div class="col-xs-12">
-          <%= f.url_field :github_url, autofocus: true , :class => "form-control input-lg", :placeholder =>"Github Url"%>
-          <span class="glyphicon glyphicon-user"></span>
+          <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-eye-open"></i>
+               <%= f.url_field :github_url, autofocus: true , :class => "form-control input-lg", :placeholder =>"Github Url"%>
+          </div>
         </div>
         
         

@@ -98,6 +98,34 @@ $font-title: 'Oswald', sans-serif;
   padding: 20px;
   background: #fff;
   min-height: 460px;
+
+  .panel-title .title a{
+    font-family :$font-title;
+    font-weight:900;
+    font-size:26px;
+    color:$color-primary-0!important;
+    margin-bottom:0px;
+  }
+
+  a.banner-btn, {
+  color: #fff;
+  border:0px;
+  border-radius:3px;
+  background:$color-primary-0;
+  text-transform:uppercase;
+  font-weight: 600;
+  text-decoration:none;
+  font-size:14px;
+}
+
+a.banner-btn:hover{
+  color:$color-primary-0;
+  background:#ffffff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 }
 
 .container-profile{

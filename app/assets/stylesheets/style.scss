@@ -9,9 +9,24 @@ html, html body {
   -webkit-text-size-adjust: 100%;
 }
 
+a.title-link {
+    color: #777;
+    text-decoration: none;
+}
+
+a.title-link:hover {
+    color: $color-primary-0;
+    text-decoration: none;
+}
 a:hover, a:focus{
         background:none;
         text-decoration:none!important;
+}
+
+.panel-heading {
+    color: #333;
+    background-color: none!important;
+    border-color: #DDD;
 }
 
 .navbar-toggle {

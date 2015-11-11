@@ -47,18 +47,18 @@
         <div class="col-md-9">
             <div class="profile-content">
               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
+                  <div class="panel">
                     <div class="panel-heading" role="tab" id="headingOne">
                       <h4 class="panel-title">
                         <div class="row">
-                        <div class="col-xs-8">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div class="col-xs-8 title ">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           Projects
                         </a>
                       </div>
                       <% if current_user ==@user %>
                       <div class="col-xs-4 text-right">
-                          <%= link_to 'Add', new_project_path, :class => "btn btn-default " %>
+                          <%= link_to 'Add', new_project_path, :class => "btn banner-btn " %>
 
                       </div>
                       <% end %>
@@ -76,7 +76,7 @@
                           <%= image_tag project.avatar_project, :class =>"img-responsive"%>
                           </div>
                           <div class=" col-xs-8">
-                            <h4><%= link_to project.name, project %></h4>
+                            <h4><%= link_to project.name, project, :class =>"title-link" %></h4>
                             <p><%= project.description %></p>
                           </div>
                             
@@ -89,18 +89,18 @@
                     
                   </div>
                   
-                  <div class="panel panel-default">
+                  <div class="panel">
                     <div class="panel-heading" role="tab" id="headingTwo">
                       <h4 class="panel-title">
-                        <div class="row">
-                        <div class="col-xs-8">
+                        <div class="row ">
+                        <div class="col-xs-8 title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                           Teams
                         </a>
                       </div>
                       <% if current_user ==@user %>
                       <div class="col-xs-4 text-right">
-                          <%= link_to 'Add', new_team_path, :class => "btn btn-default" %>
+                          <%= link_to 'Add', new_team_path, :class => "btn banner-btn" %>
                       </div>
                       <% end %>
                     </div>

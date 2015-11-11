@@ -86,5 +86,23 @@
                         </div>
                     </div>
                   </div>
+
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                          Tasks
+                        </a>
+                      </h4>
+                    </div>
+                    
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="panel-body">
+                      	<%= link_to 'New Project', new_project_path, :class => "btn btn-default" %>
+                        <%= link_to 'New Team', new_team_path, :class => "btn btn-default" %>
+                      </div>
+                    </div>
+                    
+                  </div>
     </div>
 </div>

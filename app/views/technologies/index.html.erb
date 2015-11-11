@@ -7,8 +7,8 @@
 			    <%=image_tag(tweet.user.profile_image_url("bigger"))%>
 			</div>
 			<div class="col-xs-10">
-			    <h2><% tweet.user.name %></h2>
-			    <p><%=tweet.text %></p>
+			    <h2><%= link_to tweet.user.name, "http://twitter.com/#{tweet.user.screen_name}"%></h2
+			    <p><%= tweet.text %></p>
 			</div>
 		</div>
 	<% end%>

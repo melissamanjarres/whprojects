@@ -1,3 +1,8 @@
+$color-primary-0: #00CC99;  // Main Primary color */
+$color-secondary-0: #EB6D4C;  // Main Primary color */
+$color-secondary-1: #868686;  // Main Primary color */
+$font-title: 'Oswald', sans-serif;
+
 .profile {
   margin: 20px 0;
 }
@@ -23,7 +28,7 @@
 }
 
 .profile-usertitle-name {
-  color: #5a7391;
+  font-family: $font-title;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
@@ -32,6 +37,9 @@
 .profile-userbuttons {
   text-align: center;
   margin-top: 10px;
+  a{
+  color: $color-secondary-1!important;
+  }
 }
 
 .profile-userbuttons .btn {
@@ -59,7 +67,7 @@
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
+  color: $color-secondary-1;
   font-size: 14px;
   font-weight: 400;
 }
@@ -71,7 +79,7 @@
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #5b9bd1;
+  color: $color-primary-0;
 }
 
 .profile-usermenu ul li.active {
@@ -79,9 +87,9 @@
 }
 
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
+  color: $color-primary-0;
+  background-color: #e5f9f4;
+  border-left: 2px solid $color-primary-0;
   margin-left: -2px;
 }
 
@@ -94,5 +102,7 @@
 
 .container-profile{
   width:100%;
-  
+  panel-title{
+  font-family: $font-title;
+  }
 }

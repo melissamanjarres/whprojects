@@ -1,6 +1,13 @@
 $color-primary-0: #00CC99;	// Main Primary color */
 $color-secondary-0: #EB6D4C;	// Main Primary color */
+$font-title: 'Oswald', sans-serif;
+$font-text: 'Open Sans', sans-serif;
 
+html, html body {
+  font-family: $font-text;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 
 a:hover, a:focus{
         background:none;
@@ -20,14 +27,14 @@ a:hover, a:focus{
     margin-bottom :0!important;
     
     .navbar-brand, .navbar-brand:hover{
-    background-image:url("logo.png");
-    background-size: cover;
-    display:block;
-    height:60px;
-    margin:10px;
-    outline:none;
-    text-indent:-9999px;
-    width: 180px;
+      background-image:url("logo.png");
+      background-size: cover;
+      display:block;
+      height:60px;
+      margin:10px;
+      outline:none;
+      text-indent:-9999px;
+      width: 180px;
     }
     
     
@@ -64,7 +71,10 @@ a:hover, a:focus{
 
 .our-story{
     padding-top:80px;
- p{
+    h2{
+      font-family:$font-title;
+    }
+ p{ 
     margin-top:30px;
     font-size:16px;
   }
@@ -98,11 +108,18 @@ a:hover, a:focus{
   position: absolute;
   right: 0;
   top: 0;
-  
-  p, p a , h3{
+  h3 {
+    font-family: $font-title;
     color:white;
   }
-  
+  p{
+    color:white;
+  }
+  p a {
+    font-size: 18px;
+    font-family: $font-title;
+    color:white;
+  }
   
 }
 
@@ -129,12 +146,21 @@ a:hover, a:focus{
       width:80px;
       margin:0 auto;
     }
+    li, li a, a{
+    color: #333!important;
+    }
+    li, li a{
+    font-family:$font-title;
+    font-size:20px;
+    }
 }
 
 .log-in{
     background:url("background-login.jpg");
     padding: 100px 0;
-    
+    h2{
+    font-family:$font-title;
+    }
     
 	form[role=login] span.glyphicon {
 		color: #adadad;

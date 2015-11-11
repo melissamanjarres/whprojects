@@ -4,9 +4,13 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    if params[:search]
+      @projects = Project.search(params[:search])
+    else
+      @projects = Project.all
+    end
   end
-  
+
   # GET /projects/1
   # GET /projects/1.json
   def show

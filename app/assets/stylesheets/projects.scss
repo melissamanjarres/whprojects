@@ -1,9 +1,4 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $color-primary-0: #00CC99;	// Main Primary color */
-
 $color-secondary-0: #868686;	// Main Primary color */
 
 .bg{
@@ -17,23 +12,24 @@ $color-secondary-0: #868686;	// Main Primary color */
 	font-weight: 700;
 	font-size: 5em;
 	padding: 2em 0;
-}
-.banner-info h1 span{
+
+	span{
 	font-weight: 100;
 	background: $color-secondary-0;
 	font-size: 0.7em;
 	padding: 0.2em 0.5em;
 	display: inline-block;
-}
-.banner-info h1 label{
+	}
+
+	label{
 	background:$color-primary-0;
 	font-size: 1em;
 	padding: 0.15em 0.5em;
 	margin-left:1em;
+	}
+
 }
 
-
-/*---- about ----*/
 
 .about-grids{
 	padding:1.5em 0 0 0;
@@ -53,30 +49,31 @@ $color-secondary-0: #868686;	// Main Primary color */
 	height:250px;
 }
 
+.about-grid-pic{
+	max-width: 100%;
+	max-height: 150px;
+}
+
 .about-grid-info{
 	padding: 2.3em 2.5em;
-}
-.about-grid-info h4{
+
+	h4{
     color:#FFF;
 	text-transform:uppercase;
 	font-size: 1.3em;
 	font-weight: 400;
 	border-bottom: 1px solid #FFF;
 	padding: 0 0 0.5em 0;
-}
-.about-grid-pic{
-	max-width: 100%;
-	max-height: 150px;
-}
-.about-grid-info p{
+	}
+
+	p{
 	color:#FFFFFF;
 	font-size:0.875em;;
 	line-height:1.7em;
 	font-weight:100;
+	}
 }
 
-
-/* responsive-design */
 
 @media(max-width:1366px){
 	.about-grid-info {
@@ -87,9 +84,7 @@ $color-secondary-0: #868686;	// Main Primary color */
 	.about-grid-info {
 		padding: 0.5em 1.34em;
 	}
-	.b-animate-go:hover .b-from-left {
-		padding: 0.5em 0 0 0;
-	}
+	
 }
 @media(max-width:1024px){
 	.about-grid-info {
@@ -102,134 +97,74 @@ $color-secondary-0: #868686;	// Main Primary color */
 		padding: 0.5em 1.34em;
 	}
 	
-	.banner-info h1 span {
-		font-size: 0.5em;
-	}
-	.banner-info h1 label {
-		font-size: 0.73em;
-	}
 	.banner-info h1 {
 		padding: 1.5em 0;
+
+		label {
+		font-size: 0.73em;
+		}
+
+		span {
+		font-size: 0.5em;
+		}
 	}
 }
 @media(max-width:640px){
 	.about-grid-info {
 		padding: 0.5em 1.34em;
+
+		h1 {
+		padding: 1.3em 0;
+
+			span {
+			font-size: 0.45em;
+			}
+			label {
+			font-size: 0.62em;
+			}
+		}
 	}
 	
-	.banner-info h1 span {
-		font-size: 0.45em;
-	}
-	.banner-info h1 label {
-		font-size: 0.62em;
-	}
-	.banner-info h1 {
-		padding: 1.3em 0;
-	}
-	.banner-grid {
-		padding:1em;
-	}
-	.contact-info {
-		left: 21%;
-	}
-	.banner-grid h3 {
-		font-size: 0.875em;
-	}
-	.work-with-us h4 {
-		font-size: 1.8em;
-	}
-	.work-with-us p {
-		font-size: 1.1em;
-		width: 78%;
-		margin: 0 auto;
-	}
-	a.catch-me {
-		font-size: 1.2em;
-	}
+	
 }
 @media(max-width:480px){
 	.about-grid-info {
 		padding: 0.5em 1.34em;
 	}
-	.b-animate-go:hover .b-from-left {
-		padding: 0.5em 0 0 0;
-	}
-	.banner-info h1 span {
-		font-size: 0.35em;	
-	}
-	.banner-info h1 label {
-		font-size: 0.455em;
-	}
+	
 	.banner-info h1 {
 		padding: 0.7em 0;
+		span {
+		font-size: 0.35em;	
+		}
+		label {
+			font-size: 0.455em;
+		}
 	}
 	.banner-grid {
 		padding: 0.7em 0.4em;
-	}
-	.banner-grid h3 {
+		h3 {
 		font-size: 0.875em;
+		}
 	}
-	.work-with-us h4 {
-		font-size: 1.6em;
-	}
-	.work-with-us p {
-		font-size: 1.1em;
-		width: 90%;
-		margin: 0 auto;
-	}
-	a.catch-me {
-		font-size: 1em;
-		padding: 0.5em 1em;
-	}
-	a.contact-me {
-		padding: 0.5em 1.3em;
-		font-size: 0.9em;
-		margin-top: 0.5em;
-	}
+	
 }
 @media(max-width:320px){
 	.about-grid-info {
 		padding: 0.5em 1.34em;
 	}
-	.b-animate-go:hover .b-from-left {
-		padding: 2.2em 0 0 0;
-	}
-	.banner-info h1 span {
+	
+	.banner-info h1 {
+		padding: 0.2em 0 1em;
+
+		span {
 		font-size: 0.25em;
 	}
-	.banner-info h1 label {
+
+	label {
 		font-size: 0.29em;
 		position: absolute;
 	}
-	.banner-info h1 {
-		padding: 0.2em 0 1em;
-	}
-	.banner-grid {
-		padding: 0.5em 0.4em;
-		width: 33.33%;
 	}
 	
-	#portfoliolist .portfolio {
-		width: 100%;
-	}
-	.banner-grid h3 {
-		font-size: 0.875em;
-		padding: 0.2em;
-	}
-	.work-with-us h4 {
-		font-size: 1.3em;
-	}
-	.work-with-us p {
-		font-size: 1em;
-		width: 100%;
-		margin: 0 auto;
-	}
-	a.catch-me {
-		font-size: 1em;
-		padding: 0.5em 1em;
-	}
-	
-	.work-with-us {
-		padding: 0.5em 0 1.2em;
-	}
 }

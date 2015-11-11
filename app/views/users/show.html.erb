@@ -67,6 +67,20 @@
                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-body">
                         
+                        <% @projects.each do |project| %>
+                        <div class="col-md-4 about-grid">
+                          <div class="about-grid-info">
+                            <h4><%= link_to project.name, project %></h4>
+                          </div>
+                            <div class="col-md-12">
+                            <p><%= project.description %></p>
+                          </div>
+                          <div class=" col-md-12">
+                          <%= image_tag project.avatar_project, :class =>"about-grid-pic" %>
+                          </div>
+                          </div>
+                          <% end %>
+
                       </div>
                     </div>
                     
@@ -83,6 +97,7 @@
                     
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                       <div class="panel-body">
+
                         </div>
                     </div>
                   </div>

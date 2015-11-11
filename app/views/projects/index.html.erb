@@ -1,3 +1,4 @@
+
  <div class="bg">
     <div class="banner-info">
       <div class="container">
@@ -5,8 +6,9 @@
       </div>
     </div>
   </div>
-      
-      <div id="about" class="about">
+
+    <div class="container-fluid container-compressed">  
+      <div class="about">
         <div class="head-section">
           <div class="container">
             <h3><span>Recent</span><label>Projects .</label></h3>
@@ -18,18 +20,20 @@
             <% @projects.each do |project| %>
             <div class="col-md-4 about-grid">
               <div class="about-grid-info">
-                <h4><%= project.name %></h4>
+                <h4><%= link_to project.name, project) %></h4>
+              </div>
+                <div class="col-md-12">
                 <p><%= project.description %></p>
               </div>
-              <div class="about-grid-pic">
-              <img src=<%= project.avatar %> title="name" />
-              <%= project.avatar %>
+              <div class=" col-md-12">
+              <%= image_tag project.avatar_project, :class =>"about-grid-pic" %>
               </div>
+              </div>
+              <% end %>
             </div>
+             
             </div>
-            <div class="clearfix"> </div>
-          </div>
-          <% end %>
-            
+          </div>            
         </div>
       </div>
+</div>

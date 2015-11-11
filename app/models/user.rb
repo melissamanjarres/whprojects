@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "default-avatar.png"
 
-  def team_member?(team)
+  def join?(team)
     teamrelationships.find_by_team_id(team.id)
   end
 
@@ -53,7 +53,7 @@ class User < ActiveRecord::Base
     teamrelationships.create!(team_id: team.id)
   end  
 
-  def unjoin!(team)
+  def leave!(team)
     teamrelationships.find_by_team_id(team.id).destroy
   end
   

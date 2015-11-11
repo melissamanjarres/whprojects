@@ -1,0 +1,5 @@
+ <% if current_user.join?(@team) %>
+    <%= render 'leave' %>
+  <% else %>
+    <%= render 'join' %>
+  <% end %>

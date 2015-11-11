@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'teamrelationships/destroy'
 
   get 'technologies/index'
-
+  
   resources :teams do
     member do
       get 'join'
@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'relationships/create'
 
   get 'relationships/destroy'
+
+  resources :teamrelationships, only: [:create, :destroy]
 
   resources :projects
   get 'welcome/index'

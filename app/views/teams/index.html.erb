@@ -1,9 +1,16 @@
+<div class="container-fluid">  
+<div class="container container-search">
+  <%=form_tag(teams_path, :method => "get") do%>          
+   <%= text_field_tag :search, params[:search], :class => 'input-lg', :placeholder =>" Enter a team name"%>        
+          <%end%>
+</div>
+
 <div class="services" id="work">
   <% @teams.each do |team| %>
 
   <div class="container panel">
       <div class="services-top panel-heading">
-        <h3><%= team.name %></h3>
+        <h3 class="text-center"><%= team.name %></h3>
       </div>
       
     <div class="row services-row panel-body">
@@ -32,4 +39,4 @@
       
       
     </div>
-
+</div>

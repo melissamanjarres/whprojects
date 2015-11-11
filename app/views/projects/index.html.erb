@@ -7,15 +7,16 @@
     </div>
   </div>
 
+<div class="container container-search">
+  <%=form_tag(projects_path, :method => "get") do%>          
+   <%= text_field_tag :search, params[:search], :class => 'input-lg', :placeholder =>" Enter a project name"%>        
+          <%end%>
+          </div>
+          
     <div class="container-fluid container-compressed">  
       <div class="about">
         <div class="head-section">
-          <div class="container">
-            <h3>Search</h3>
-            <%=form_tag(projects_path, :method => "get") do%>          
-            <%= text_field_tag :search, params[:search], :class => 'navbar-link'%>           
-          <%end%>
-          </div>
+
         </div>
           
           <div class="container">
@@ -28,12 +29,12 @@
             <% @projects.each do |project| %>
             <div class="col-md-4 about-grid">
               <div class="about-grid-info">
-                <h4><%= link_to project.name, project %></h4>
+                <h4 class="text-center"><%= link_to project.name, project%></h4>
               </div>
-                <div class="col-md-12">
+                <div class="col-md-12 text-center">
                 <p><%= project.description %></p>
               </div>
-              <div class=" col-md-12">
+              <div class=" col-md-12 text-center">
               <%= image_tag project.avatar_project, :class =>"about-grid-pic" %>
               </div>
               </div>

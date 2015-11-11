@@ -75,13 +75,16 @@ $font-title: 'Oswald', sans-serif;
 .about-grid-info{
 	padding: 2.3em 2.5em;
 
-	h4{
-    color:#FFF;
-	text-transform:uppercase;
-	font-size: 1.3em;
-	font-weight: 400;
-	border-bottom: 1px solid #FFF;
-	padding: 0 0 0.5em 0;
+	h4 {
+		border-bottom: 1px solid #FFF;
+		a{
+	    color:#FFF;
+		font-size: 1.3em;
+		font-family:$font-title;
+		font-weight: 400;
+		
+		padding: 0 0 0.5em 0;
+		}
 	}
 
 	p{

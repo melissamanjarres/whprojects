@@ -1,5 +1,6 @@
 $color-primary-0: #00CC99;	// Main Primary color */
 $color-secondary-0: #EB6D4C;	// Main Primary color */
+$color-secondary-1: #868686;
 $font-title: 'Oswald', sans-serif;
 $font-text: 'Open Sans', sans-serif;
 
@@ -73,7 +74,14 @@ a:hover, a:focus{
     margin:0;
     padding:0;
 }
+.container-search{
+  background-color: $color-secondary-1;
+  padding:40px 30px;
+  input{
+    width:100%;
 
+  }
+}
 .carousel-caption{
     display:block;
     background-color: rgba(76,76,76,0.3);

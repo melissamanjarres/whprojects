@@ -34,7 +34,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <li><p class="navbar-text">Hola, <%= link_to  current_user.username, current_user, :class => 'navbar-link' %> </p></li>
+            <li><p class="navbar-text">Hola, <%= link_to  current_user.username, current_user, :class => 'title-link' %> </p></li>
             <li class="navbar-button"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link"  %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
@@ -57,13 +57,13 @@
          <p class="text-center"><%= image_tag("logo-no-text-gray.png", :alt => "Logo", :class =>"footer-logo") %></p>
         
         <ul class="list-inline text-center">
-          <li> <%= link_to "Home", root_path %></li>
-          <li><%= link_to 'Our Team', :about %> </a></li>
+          <li> <%= link_to "Home", root_path, :class =>"title-link" %></li>
+          <li><%= link_to 'Our Team', :about, :class =>"title-link" %> </a></li>
         </ul>
 
         <p class="text-center">&copy;2015 Projects-WH. All Rights Reserved.</p>
         
-        <p class="text-center">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+        <p class="text-center">Icons made by <a href="http://www.freepik.com" title="Freepik" class ="title-link" >Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon" class ="title-link">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" class="title-link">CC BY 3.0</a></p>
         
         
         

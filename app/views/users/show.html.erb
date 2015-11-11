@@ -111,7 +111,7 @@
                       <div class="panel-body">
                           <% @teams_rel.each do |team_rel| %>
                             <div class="col-xs-12">
-                              <h4><%= link_to team_rel.team.name, team_rel.team %></h4>
+                              <h4><%= link_to team_rel.team.name, team_rel.team , :class =>"title-link"%></h4>
                             </div>
                           <% end %>                         
 

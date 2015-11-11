@@ -8,7 +8,7 @@
 	<h1>
 	  <%= @project.name %>
 	</h1>
-	<h2 class="text-left">Created by: <em> <%= link_to @project.user.username, @project.user %></em></h2>
+	<h2 class="text-left">Created by: <em> <%= link_to @project.user.username, @project.user , :class =>"title-link"%></em></h2>
 	<blockquote>
   		<p><%= @project.description %></p>
 

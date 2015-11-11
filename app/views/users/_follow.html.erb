@@ -1,14 +1,14 @@
 <% @user ||= current_user %>
   <%= render "following"%>
   <%= render "followers"%>
-  <a type="button" data-toggle="modal" data-target="#following">
+  <a type="button" data-toggle="modal" data-target="#following" class ="title-link">
   <strong id="following">
       <%= @user.followed_users.count %>
     </strong>
     following  
   </a>
 
-  <a type="button" data-toggle="modal" data-target="#followers">
+  <a type="button" data-toggle="modal" data-target="#followers " class ="title-link">
   <strong id="followers" >
       <%= @user.followers.count %>
     </strong>

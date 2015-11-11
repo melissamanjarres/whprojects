@@ -56,5 +56,9 @@ class User < ActiveRecord::Base
   def leave!(team)
     teamrelationships.find_by_team_id(team.id).destroy
   end
+
+  def self.search(query)
+      where("username like ?","#{query}%")
+  end 
   
 end

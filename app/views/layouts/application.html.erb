@@ -35,7 +35,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="navbar-text">
           <%=form_tag(projects_path, :method => "get") do%>          
-            <%= text_field_tag :search, params[:search], placeholder: "Search Projects", :class => 'navbar-link'%>           
+            <%= text_field_tag :search, params[:search], :class => 'navbar-link'%>           
           <%end%>
           <% if user_signed_in? %>
             <li><p class="navbar-text">Hola, <%= link_to  current_user.username, current_user, :class => 'navbar-link' %> </p></li>

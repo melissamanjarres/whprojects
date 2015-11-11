@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Teams</h1>
+<%=form_tag(teams_path, :method => "get") do%>          
+    <%= text_field_tag :search, params[:search], placeholder: "Search Teams", :class => 'navbar-link'%>           
+<%end%>
 
 <table>
   <thead>

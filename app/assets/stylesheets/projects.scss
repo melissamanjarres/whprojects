@@ -1,5 +1,23 @@
-$color-primary-0: #00CC99;	// Main Primary color */
-$color-secondary-0: #868686;	// Main Primary color */
+$color-primary-0: #00CC99;  // Main Primary color */
+$color-secondary-0: #EB6D4C;  // Main Primary color */
+$color-secondary-1: #868686;  // Main Primary color */
+$font-title: 'Oswald', sans-serif;
+
+.panel-show{
+	
+	margin-top:80px;
+
+	h1{
+		font-family:$font-title;
+	}
+	h2{
+		font-size:16px;
+	}
+	.img-link{
+	width:80px;
+	}
+
+}
 
 .bg{
 	background:url("banner_projects2.jpg") no-repeat center;
@@ -15,7 +33,7 @@ $color-secondary-0: #868686;	// Main Primary color */
 
 	span{
 	font-weight: 100;
-	background: $color-secondary-0;
+	background: $color-secondary-1;
 	font-size: 0.7em;
 	padding: 0.2em 0.5em;
 	display: inline-block;
@@ -43,7 +61,7 @@ $color-secondary-0: #868686;	// Main Primary color */
 }
 
 .about-grid:nth-child(even) {
-    background:$color-secondary-0;
+    background:$color-secondary-1;
 	margin:0;
 	padding:0;
 	height:250px;

@@ -1,4 +1,4 @@
 <%= form_for(current_user.teamrelationships.find_by(team_id: @team.id),
              html: { method: :delete }) do |f| %>
-  <%= f.submit "leave", class: "btn btn-large" %>
+  <%= f.submit "leave", class: "banner-btn-leave" %>
 <% end %>

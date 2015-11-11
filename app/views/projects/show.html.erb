@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid container-compressed">
+<div class="panel panel-default panel-show">
+  <div class="panel-body">
+    <div class="col-xs-7">
+		<%= image_tag @project.avatar_project ,:class => "img-responsive img-rounded"%>
+</div>
+<div class="col-xs-5">
+	<h1>
+	  <%= @project.name %>
+	</h1>
+	<h2 class="text-left">Created by: <em> <%= link_to @project.user.username, @project.user %></em></h2>
+	<blockquote>
+  		<p><%= @project.description %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Avatar:</strong>
-  <%= image_tag @project.avatar_project.url(:thumb) %>
-</p>
-
-<p>
-  <strong>Github url:</strong>
-  <%= @project.github_url %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+	</blockquote>
+	
+	
+	<p class="text-right"> 
+		<%= link_to @project.github_url do %>
+           <%= image_tag "git-logo.png" ,:class => "img-link"%>
+        <% end %>
+	</p>
+</div>
+</div>
+  </div>
+</div>

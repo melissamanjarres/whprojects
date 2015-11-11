@@ -1,3 +1,98 @@
-// Place all the styles related to the teams controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$color-primary-0: #00CC99;  // Main Primary color */
+$color-secondary-0: #EB6D4C;  // Main Primary color */
+$color-secondary-1: #868686;  // Main Primary color */
+$font-title: 'Oswald', sans-serif;
+
+a.banner-btn, input[type="submit"].banner-btn {
+	color: #fff;
+	border:0px;
+	border-radius:3px;
+	padding:10px 20px;
+	background:$color-primary-0;
+	text-transform:uppercase;
+	font-weight: 600;
+	text-decoration:none;
+	font-size:20px;
+}
+input[type="submit"].banner-btn-leave{
+	background:$color-secondary-0;
+	color: #fff;
+	border:0px;
+	border-radius:3px;
+	padding:10px 20px;
+	text-transform:uppercase;
+	font-weight: 600;
+	text-decoration:none;
+	font-size:20px;
+}
+
+a.banner-btn:hover,input[type="submit"].banner-btn:hover, input[type="submit"].banner-btn-leave:hover {
+	color:$color-primary-0;
+	background:#ffffff;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/*--about teams--*/
+
+.services-top{
+	text-align:center;
+}
+.services-top h3{
+	font-family :$font-title;
+	font-weight:900;
+	font-size:40px;
+	color:$color-primary-0;
+	margin-bottom:0px;
+}
+.services-top p{
+	font-weight: 400;
+	font-size:20px;
+	color: #A6A9AA;
+}
+.image-left{
+	margin:0px 5px
+}
+
+.image-left-1{
+	width:107px;
+	height:102px;
+	display: block;
+	float:left;
+	margin-right: 15px;
+}
+
+i.para{
+	small{
+	font-weight:400;
+	font-size:14px;
+	font-style: normal;
+	color: rgba(107, 111, 113, 0.86);
+
+	span a{
+	font-weight:900;
+	font-size: 16px;
+	font-style: normal;
+	color: rgba(107, 111, 113, 0.86);
+	text-decoration:none;
+}
+span a:hover{
+	color: $color-primary-0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+}
+
+}
+
+
+.services{
+	padding:40px 0px
+}
+.services-row{
+	padding:40px 0px;
+}
+

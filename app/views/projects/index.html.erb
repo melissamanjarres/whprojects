@@ -10,6 +10,12 @@
     <div class="container-fluid container-compressed">  
       <div class="about">
         <div class="head-section">
+
+          <li class="navbar-text">
+          <%=form_tag(projects_path, :method => "get") do%>          
+            <%= text_field_tag :search, params[:search], :class => 'navbar-link'%>           
+          <%end%>
+          
           <div class="container">
             <h3><span>Recent</span><label>Projects .</label></h3>
           </div>

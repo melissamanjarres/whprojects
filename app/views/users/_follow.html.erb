@@ -1,13 +1,15 @@
 <% @user ||= current_user %>
-
-  <a href="<%= following_user_path(@user) %>">
-    <strong id="following">
+  <%= render "following"%>
+  <%= render "followers"%>
+  <a type="button" data-toggle="modal" data-target="#following">
+  <strong id="following">
       <%= @user.followed_users.count %>
     </strong>
-    following
+    following  
   </a>
-  <a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" >
+
+  <a type="button" data-toggle="modal" data-target="#followers">
+  <strong id="followers" >
       <%= @user.followers.count %>
     </strong>
     followers

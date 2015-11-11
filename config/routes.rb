@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'teamrelationships/create'
-
   get 'teamrelationships/destroy'
 
   get 'technologies/index'
@@ -11,8 +10,8 @@ Rails.application.routes.draw do
       get 'leave'
     end
   end
+  
   get 'relationships/create'
-
   get 'relationships/destroy'
 
   resources :teamrelationships, only: [:create, :destroy]
@@ -86,5 +85,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   get 'aboutus' => 'static#about-us', as: :about
-  #get 'projects' => 'static#projects', as: :projects
 end

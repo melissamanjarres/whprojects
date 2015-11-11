@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def show
         @user = User.find(params[:id])
         @projects = Project.where("user_id==?", @user.id )
+        @teams_rel = Teamrelationship.where("user_id==?", @user.id )
         @following = @user.followed_users
         @followers = @user.followers
   end

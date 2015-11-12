@@ -26,8 +26,14 @@ ActiveRecord::Schema.define(version: 20151112143802) do
     t.integer  "author"
   end
 
-# Could not dump table "notifications" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "notifications", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "tipo"
+    t.string   "name"
+    t.string   "link"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"

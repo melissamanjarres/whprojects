@@ -38,6 +38,10 @@
           </div>
         </div>
         
+        <div class="field">
+        <%= f.select :team_id, Team.all.where("user_id==?", current_user.id).collect { |p| [ p.name, p.id ] } %>
+
+    </div>
         
      <div class="col-xs-12 text-right">
       <%= f.submit "Create",  :class => "btn btn-lg btn-success"%>

@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110231038) do
+ActiveRecord::Schema.define(version: 20151112143802) do
 
   create_table "feeds", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "memberships", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "author"
+  end
+
+# Could not dump table "notifications" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +44,8 @@ ActiveRecord::Schema.define(version: 20151110231038) do
     t.integer  "avatar_project_file_size"
     t.datetime "avatar_project_updated_at"
     t.integer  "user_id"
+    t.integer  "team_id"
+    t.string   "team_name"
   end
 
   create_table "relationships", force: :cascade do |t|

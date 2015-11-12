@@ -60,5 +60,14 @@ class User < ActiveRecord::Base
   def self.search(query)
       where("username like ?","#{query}%")
   end 
+
+  has_many :notifications
+  
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+                     WHERE  follower_id = :user_id"
+    Notification.where("user_id IN (#{following_ids}) ", 
+                      user_id: id)
+  end
   
 end

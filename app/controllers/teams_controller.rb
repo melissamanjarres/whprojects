@@ -16,6 +16,7 @@ class TeamsController < ApplicationController
   def show
     @team =  Team.find(params[:id])
     @team_members = @team.users
+    @team_project = Project.where("team_id==?", @team.id )
   end
 
   # GET /teams/new
@@ -45,6 +46,7 @@ class TeamsController < ApplicationController
   # POST /teams.json
   def create
     @team = Team.new(team_params)
+    Notification.create(user_id: current_user.id, tipo: 1, name: current_user.username + " has created a new team " + @team.name, link: current_user.id)
     respond_to do |format|
       if @team.save
         format.html { redirect_to @team, notice: 'Team was successfully created.' }

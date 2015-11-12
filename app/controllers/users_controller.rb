@@ -20,6 +20,7 @@ class UsersController < ApplicationController
         @teams_rel = Teamrelationship.where("user_id==?", @user.id )
         @following = @user.followed_users
         @followers = @user.followers
+        @feed_not = current_user.feed
   end
 
 

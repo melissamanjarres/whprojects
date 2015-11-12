@@ -29,6 +29,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = current_user.projects.new(project_params)
+    Notification.create(user_id: current_user.id, tipo: 1, name: current_user.username + " has created a new project " + @project.name, link: current_user.id)
 
     respond_to do |format|
       if @project.save
@@ -73,6 +74,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :avatar, :github_url, :avatar_project)
+      params.require(:project).permit(:name, :description, :avatar, :github_url, :avatar_project, :team_id)
     end
 end

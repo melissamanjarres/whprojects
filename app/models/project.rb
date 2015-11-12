@@ -2,6 +2,8 @@ class Project < ActiveRecord::Base
     belongs_to :user
     validates :user_id, presence: true
     validates :name, presence: true
+    belongs_to :team
+    validates :team_id, presence: true
     
     has_attached_file :avatar_project, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "project-default.jpg"
     validates_attachment_content_type :avatar_project, content_type: /\Aimage\/.*\Z/
